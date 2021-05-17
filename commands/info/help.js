@@ -42,63 +42,27 @@ module.exports = {
 
     } else {
 
-      const commands = await client.commands;
-
-      let emx = new MessageEmbed()
-
-        .setDescription('**Heloo i am cwk music bot i support <:spotify:842405194217947176> <a:fx_Youtube:842405195211603978>  made using discord.js made by cwkhan*')
-
-  
-
-        .setColor("BLUE")
-
-        .setFooter(client.user.username, client.user.displayAvatarURL())
-
-        
-
-        .setThumbnail(client.user.displayAvatarURL());
-
-          
-
-      let com = {};
-
-      for (let comm of commands.array()) {
-
-        let category = comm.category || "Unknown";
-
-        let name = comm.name;
-
-        if (!com[category]) {
-
-          com[category] = [];
-
-        }
-
-        com[category].push(name);
-
-      }
-
-      for(const [key, value] of Object.entries(com)) {
-
-        let category = key;
-
-        let desc = "`" + value.join("`, `") + "`";
-
-        emx.addField(`${category.toUpperCase()}[${value.length}]`, desc);
-
-      }
-
-     emx.addField('important links ','**<:CPTNLINK:830835407343714325> [Support](https://dsc.gg/cwkhan)**  | **[invite](https://dsc.gg/cwkmusic)**')
-
-      return message.channel.send(emx);
-
+      const embed = new MessageEmbed()
+        .setColor('#85b0d2')
+        .setTitle('Music Commands')
+        .addField('join', ` Join the voice channel!`, true)
+        .addField('leave', `Leaves the voice channel!`, true)
+        .addField('play', `Play the requested song in the vc`, true)
+        .addField('stop', `Clears the queue and leave the vc'`, true)
+        .addField('pause', ` Pause the queue`, true)
+        .addField('resume', ` Resume the queue`, true)
+        .addField('shuffle', ` Shuffle the queue`, true)
+        .addField('queue', ` Gives you info about the server queue`, true)
+        .addField('remove', ` Remove a song from the queue`, true)
+        .addField('loop', `Loop the queue`, true)
+        .addField('disable-loop', ` Stop looping the queue`, true)
+        .addField('skip', ` Skip the song that its playing.`, true)
+        .addField('clear', ` Clear the queue`, true)
+        .addField('playlist', `Play a playlist in the vc`, true)
+        .addField('volume', `Set the volume of the bot in the vc`, true)
+        .addField('nowplaying', `Gives info about the song that its being played and the progress of it`, true)
+        .setTimestamp()
+        .setFooter(`madr by cwkhan 😎 `)
+        message.channel.send(embed)
     }
-
-  }
-
-};
-
-
-
-
-
+}
