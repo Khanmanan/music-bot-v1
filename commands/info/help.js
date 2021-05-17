@@ -42,7 +42,7 @@ module.exports = {
 
     } else {
 
-      const embed = new MessageEmbed()
+      const embed1 = new MessageEmbed()
         .setColor('#85b0d2')
         .setTitle('Music Commands')
         .addField('join', ` Join the voice channel!`, true)
@@ -63,6 +63,6 @@ module.exports = {
         .addField('nowplaying', `Gives info about the song that its being played and the progress of it`, true)
         .setTimestamp()
         .setFooter(`madr by cwkhan 😎 `)
-        message.channel.send(embed)
+        message.channel.send(embed1)
     }
 }
