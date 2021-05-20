@@ -2,7 +2,9 @@
 
 ### 📝 Tutorial
 
-# Comeing soon [Click here](https://youtube.com/cwkhan)
+<div align="center"><a href="https://youtu.be/nfMI-ua0XIk"> 
+    <img src="https://cdn.discordapp.com/attachments/823585354569351208/841702613967831070/image0.jpg" alt="Automodbot" />
+</a> </div>
 
 ### 💨 Run the project's
 Glitch: [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/Khanmanan/music-bot-v1)
